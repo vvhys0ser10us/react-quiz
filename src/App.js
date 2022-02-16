@@ -13,6 +13,7 @@ function App() {
     correct,
     nextQuestion,
     checkAnswer,
+    isModalOpen,
   } = useGlobalContext()
 
   if (waiting) {
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <main>
-      {/* <Modal></Modal> */}
+      <Modal></Modal>
       <section className="quiz">
         <p className="correct-answers">
           correct answer : {correct}/{index}

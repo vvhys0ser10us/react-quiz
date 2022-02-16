@@ -56,11 +56,22 @@ const AppProvider = ({ children }) => {
     setIndex((oldIndex) => {
       const index = oldIndex + 1
       if (index > questions.length - 1) {
+        openModal()
         return 0
       } else {
         return index
       }
     })
+  }
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setWaiting(true)
+    setCorrect(0)
   }
 
   useEffect(() => {
