@@ -22,7 +22,9 @@ function App() {
     return <Loading />
   }
   const { question, correct_answer, incorrect_answers } = questions[index]
-  const ans = [...incorrect_answers, correct_answer]
+  let ans = [...incorrect_answers]
+  const randomPosition = Math.floor(Math.random() * 4)
+  ans.splice(randomPosition, 0, correct_answer)
 
   return (
     <main>
