@@ -13,7 +13,6 @@ function App() {
     correct,
     nextQuestion,
     checkAnswer,
-    isModalOpen,
   } = useGlobalContext()
 
   if (waiting) {
